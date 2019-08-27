@@ -19,10 +19,17 @@
   padding: $l-size 0;
   font-size: $l-size;
   color: white;
+  border: none;
   border-bottom: $m-size solid darken($purple,10%);
   font-weight: 700;
-  margin-bottom: $l-size;
+  margin-bottom: 0;
 }
 .big-button:disabled  {
   opacity: .5;
+}
+
+@media (min-width : $desktop-breakpoint){
+  .big-button{
+    margin-bottom: $l-size;
+  }
 }
