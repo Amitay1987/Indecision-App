@@ -1,19 +1,17 @@
 import React from "react";
 
-const Option = (props) => {
-  return (
-    <div>
-      {props.optionText}
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          props.handleDeleteOption(props.optionText)
-        }}
-      >
-        remove
-          </button>
-    </div>
-  );
-}
+const Option = (props) => (
+  <li className='widget__option'>
+    {props.index + '.' + props.optionText}
+    <button className='button--link'
+      onClick={(e) => {
+        e.preventDefault();
+        props.handleDeleteOption(props.optionText)
+      }}
+    >
+      remove
+    </button>
+  </li>
+)
 
 export default Option;
